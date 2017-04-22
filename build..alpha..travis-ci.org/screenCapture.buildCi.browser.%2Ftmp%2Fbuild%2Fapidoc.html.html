@@ -1,4 +1,4 @@
-<div class="apidocDiv">
+<html><head></head><body><div class="apidocDiv">
 <style>
 /*csslint
 */
@@ -47,17 +47,10 @@
 }
 </style>
 <h1>api documentation for
-    <a
-
-        href="http://github.com/jeresig/i18n-node-2"
-
-    >i18n-2 (v0.6.3)</a>
+    <a href="http://github.com/jeresig/i18n-node-2">i18n-2 (v0.6.3)</a>
 </h1>
 <h4>lightweight simple translation module with dynamic json storage</h4>
-<div class="apidocSectionDiv"><a
-    href="#apidoc.tableOfContents"
-    id="apidoc.tableOfContents"
-><h1>table of contents</h1></a><ol>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
 
     <li class="apidocModuleLi"><a href="#apidoc.module.i18n-2">module i18n-2</a><ol>
 
@@ -391,7 +384,7 @@
 	var self = this;
 
 	// Put into dev or production mode
-	this.devMode = process.env.NODE_ENV !== &#x22;production&#x22;;
+	this.devMode = process.env.NODE_ENV !== "production";
 
 	// Copy over options
 	for (var prop in opt) {
@@ -399,15 +392,15 @@
 	}
 
 	// you may register helpers in global scope, up to you
-	if (typeof this.register === &#x22;object&#x22;) {
+	if (typeof this.register === "object") {
 		i18n.resMethods.forEach(function (method) {
 			self.register[method] = self[method].bind(self);
 		});
 	}
 
 	// implicitly read all locales
-	// if it&#x27;s an array of locale names, read in the data
-	if (opt.locales &#x26;&#x26; opt.locales.forEach) {
+	// if it's an array of locale names, read in the data
+	if (opt.locales &amp;&amp; opt.locales.forEach) {
 		this.locales = {};
 
 		opt.locales.forEach(function (locale) {
@@ -422,7 +415,7 @@
 
 	// Check the defaultLocale
 	if (!this.locales[this.defaultLocale]) {
-		console.error(&#x22;Not a valid default locale.&#x22;);
+		console.error("Not a valid default locale.");
 	}
 
 	if (this.request) {
@@ -440,7 +433,7 @@
 
 		this.prefLocale = this.preferredLocale();
 
-		if (this.prefLocale !== false &#x26;&#x26; this.prefLocale !== this.locale) {
+		if (this.prefLocale !== false &amp;&amp; this.prefLocale !== this.locale) {
 			this.setLocale(this.prefLocale);
 		}
 	}
@@ -485,14 +478,14 @@
 
 ### `new i18n(options)`
 
-The `i18n` function is the return result from calling `require(&#x27;i18n-2&#x27;)`. You use this to instantiate an `I18n` instance
- and set any configuration options. You&#x27;ll probably only do this if you&#x27;re not using the `expressBind` method.
+The `i18n` function is the return result from calling `require('i18n-2')`. You use this to instantiate an `I18n` instance
+ and set any configuration options. You'll probably only do this if you're not using the `expressBind` method.
 
 ### `i18n.<span class="apidocCodeKeywordSpan">expressBind</span>(app, options)`
 
-You&#x27;ll use this method to attach the i18n functionality to the request object inside Express.js. The app argument should be
- your Express.js app and the options argument should be the same as if you were calling `new i18n(options)`. See **&#x22;Using with
- Express.js&#x22;** at the end of this README for more details.
+You'll use this method to attach the i18n functionality to the request object inside Express.js. The app argument should be
+ your Express.js app and the options argument should be the same as if you were calling `new i18n(options)`. See **"Using with
+ Express.js"** at the end of this README for more details.
 
 ### `__(string, [...])`
 
@@ -514,7 +507,7 @@ sprintf module.
 	var self = this;
 
 	// Put into dev or production mode
-	this.devMode = process.env.NODE_ENV !== &#x22;production&#x22;;
+	this.devMode = process.env.NODE_ENV !== "production";
 
 	// Copy over options
 	for (var prop in opt) {
@@ -522,15 +515,15 @@ sprintf module.
 	}
 
 	// you may register helpers in global scope, up to you
-	if (typeof this.register === &#x22;object&#x22;) {
+	if (typeof this.register === "object") {
 		i18n.resMethods.forEach(function (method) {
 			self.register[method] = self[method].bind(self);
 		});
 	}
 
 	// implicitly read all locales
-	// if it&#x27;s an array of locale names, read in the data
-	if (opt.locales &#x26;&#x26; opt.locales.forEach) {
+	// if it's an array of locale names, read in the data
+	if (opt.locales &amp;&amp; opt.locales.forEach) {
 		this.locales = {};
 
 		opt.locales.forEach(function (locale) {
@@ -545,7 +538,7 @@ sprintf module.
 
 	// Check the defaultLocale
 	if (!this.locales[this.defaultLocale]) {
-		console.error(&#x22;Not a valid default locale.&#x22;);
+		console.error("Not a valid default locale.");
 	}
 
 	if (this.request) {
@@ -563,7 +556,7 @@ sprintf module.
 
 		this.prefLocale = this.preferredLocale();
 
-		if (this.prefLocale !== false &#x26;&#x26; this.prefLocale !== this.locale) {
+		if (this.prefLocale !== false &amp;&amp; this.prefLocale !== this.locale) {
 			this.setLocale(this.prefLocale);
 		}
 	}
@@ -623,7 +616,7 @@ sprintf module.
 	var self = this;
 
 	// Put into dev or production mode
-	this.devMode = process.env.NODE_ENV !== &#x22;production&#x22;;
+	this.devMode = process.env.NODE_ENV !== "production";
 
 	// Copy over options
 	for (var prop in opt) {
@@ -631,15 +624,15 @@ sprintf module.
 	}
 
 	// you may register helpers in global scope, up to you
-	if (typeof this.register === &#x22;object&#x22;) {
+	if (typeof this.register === "object") {
 		i18n.resMethods.forEach(function (method) {
 			self.register[method] = self[method].bind(self);
 		});
 	}
 
 	// implicitly read all locales
-	// if it&#x27;s an array of locale names, read in the data
-	if (opt.locales &#x26;&#x26; opt.locales.forEach) {
+	// if it's an array of locale names, read in the data
+	if (opt.locales &amp;&amp; opt.locales.forEach) {
 		this.locales = {};
 
 		opt.locales.forEach(function (locale) {
@@ -654,7 +647,7 @@ sprintf module.
 
 	// Check the defaultLocale
 	if (!this.locales[this.defaultLocale]) {
-		console.error(&#x22;Not a valid default locale.&#x22;);
+		console.error("Not a valid default locale.");
 	}
 
 	if (this.request) {
@@ -672,7 +665,7 @@ sprintf module.
 
 		this.prefLocale = this.preferredLocale();
 
-		if (this.prefLocale !== false &#x26;&#x26; this.prefLocale !== this.locale) {
+		if (this.prefLocale !== false &amp;&amp; this.prefLocale !== this.locale) {
 			this.setLocale(this.prefLocale);
 		}
 	}
@@ -717,14 +710,14 @@ sprintf module.
 
 ### `new i18n(options)`
 
-The `i18n` function is the return result from calling `require(&#x27;i18n-2&#x27;)`. You use this to instantiate an `I18n` instance
- and set any configuration options. You&#x27;ll probably only do this if you&#x27;re not using the `expressBind` method.
+The `i18n` function is the return result from calling `require('i18n-2')`. You use this to instantiate an `I18n` instance
+ and set any configuration options. You'll probably only do this if you're not using the `expressBind` method.
 
 ### `i18n.<span class="apidocCodeKeywordSpan">expressBind</span>(app, options)`
 
-You&#x27;ll use this method to attach the i18n functionality to the request object inside Express.js. The app argument should be
- your Express.js app and the options argument should be the same as if you were calling `new i18n(options)`. See **&#x22;Using with
- Express.js&#x22;** at the end of this README for more details.
+You'll use this method to attach the i18n functionality to the request object inside Express.js. The app argument should be
+ your Express.js app and the options argument should be the same as if you were calling `new i18n(options)`. See **"Using with
+ Express.js"** at the end of this README for more details.
 
 ### `__(string, [...])`
 
@@ -782,7 +775,7 @@ sprintf module.
     <li>description and source-code<pre class="apidocCodePre">__ = function () {
 		var msg = this.translate(this.locale, arguments[0]);
 
-		if (arguments.length &#x3e; 1) {
+		if (arguments.length &gt; 1) {
 			msg = vsprintf(msg, Array.prototype.slice.call(arguments, 1));
 		}
 
@@ -790,20 +783,20 @@ sprintf module.
 	}</pre></li>
     <li>example usage<pre class="apidocCodePre">...
     // Load Module and Instantiate
-    var i18n = new (require(&#x27;i18n-2&#x27;))({
+    var i18n = new (require('i18n-2'))({
         // setup some locales - other locales default to the first locale
-        locales: [&#x27;en&#x27;, &#x27;de&#x27;]
+        locales: ['en', 'de']
     });
 
     // Use it however you wish
-    console.log( i18n.<span class="apidocCodeKeywordSpan">__</span>(&#x22;Hello!&#x22;) );
+    console.log( i18n.<span class="apidocCodeKeywordSpan">__</span>("Hello!") );
 
 ## API:
 
 ### `new i18n(options)`
 
-The `i18n` function is the return result from calling `require(&#x27;i18n-2&#x27;)`. You use this to instantiate an `I18n` instance
- and set any configuration options. You&#x27;ll probably only do this if you&#x27;re not using the `expressBind` method.
+The `i18n` function is the return result from calling `require('i18n-2')`. You use this to instantiate an `I18n` instance
+ and set any configuration options. You'll probably only do this if you're not using the `expressBind` method.
 ...</pre></li>
     </ul>
 
@@ -818,21 +811,21 @@ The `i18n` function is the return result from calling `require(&#x27;i18n-2&#x27
     <ul>
     <li>description and source-code<pre class="apidocCodePre">__n = function (pathOrSingular, countOrPlural, additionalOrCount) {
 		var msg;
-		if (typeof countOrPlural === &#x27;number&#x27;) {
+		if (typeof countOrPlural === 'number') {
 			var path = pathOrSingular;
 			var count = countOrPlural;
 			msg = this.translate(this.locale, path);
 
-			msg = vsprintf(parseInt(count, 10) &#x3e; 1 ? msg.other : msg.one, Array.prototype.slice.call(arguments, 1));
+			msg = vsprintf(parseInt(count, 10) &gt; 1 ? msg.other : msg.one, Array.prototype.slice.call(arguments, 1));
 		} else {
 			var singular = pathOrSingular;
 			var plural = countOrPlural;
 			var count = additionalOrCount;
 			msg = this.translate(this.locale, singular, plural);
 
-			msg = vsprintf(parseInt(count, 10) &#x3e; 1 ? msg.other : msg.one, [count]);
+			msg = vsprintf(parseInt(count, 10) &gt; 1 ? msg.other : msg.one, [count]);
 
-			if (arguments.length &#x3e; 3) {
+			if (arguments.length &gt; 3) {
 				msg = vsprintf(msg, Array.prototype.slice.call(arguments, 3));
 			}
 		}
@@ -841,20 +834,20 @@ The `i18n` function is the return result from calling `require(&#x27;i18n-2&#x27
 	}</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 
-i18n.__(&#x27;foo.bar&#x27;);
+i18n.__('foo.bar');
 
 ### `__n(one, other, count, [...])`
 
 Different plural forms are supported as a response to `count`:
 
-var singular = i18n.<span class="apidocCodeKeywordSpan">__n</span>(&#x27;%s cat&#x27;, &#x27;%s cats&#x27;, 1);
-var plural = i18n.__n(&#x27;%s cat&#x27;, &#x27;%s cats&#x27;, 3);
+var singular = i18n.<span class="apidocCodeKeywordSpan">__n</span>('%s cat', '%s cats', 1);
+var plural = i18n.__n('%s cat', '%s cats', 3);
 
 this gives you **1 cat** and **3 cats**. As with `__(...)` these could be nested:
 
-var singular = i18n.__n(&#x27;There is one monkey in the %%s&#x27;, &#x27;There are %d monkeys in the %%s&#x27;, 1, &#x27;tree&#
+var singular = i18n.__n('There is one monkey in the %%s', 'There are %d monkeys in the %%s', 1, 'tree&amp;#
 x27;);
-var plural = i18n.__n(&#x27;There is one monkey in the %%s&#x27;, &#x27;There are %d monkeys in the %%s&#x27;, 3, &#x27;tree&#x27
+var plural = i18n.__n('There is one monkey in the %%s', 'There are %d monkeys in the %%s', 3, 'tree'
 ;);
 ...</pre></li>
     </ul>
@@ -902,7 +895,7 @@ var plural = i18n.__n(&#x27;There is one monkey in the %%s&#x27;, &#x27;There ar
 		if (!this.locales[locale]) {
 			this.locales[locale] = data;
 
-			// Only cache the files when we&#x27;re not in dev mode
+			// Only cache the files when we're not in dev mode
 			if (!this.devMode) {
 				var file = this.locateFile(locale);
 				if (!i18n.localeCache[file]) {
@@ -940,7 +933,7 @@ var plural = i18n.__n(&#x27;There is one monkey in the %%s&#x27;, &#x27;There ar
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">locateFile = function (locale) {
-		return path.normalize(this.directory + &#x27;/&#x27; + locale + this.extension);
+		return path.normalize(this.directory + '/' + locale + this.extension);
 	}</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -956,7 +949,7 @@ var plural = i18n.__n(&#x27;There is one monkey in the %%s&#x27;, &#x27;There ar
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function parse() { [native code] }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-locales: [&#x27;at-de&#x27;, &#x27;de-de&#x27;, &#x27;at-en&#x27;, &#x27;de-en&#x27;],
+locales: ['at-de', 'de-de', 'at-en', 'de-en'],
 base: function(locale) {
     return locale.slice(-2);
 }
@@ -966,11 +959,11 @@ base: function(locale) {
 Optional custom methods to override `JSON.<span class="apidocCodeKeywordSpan">parse</span>()` and `JSON.stringify()`, respectively
 . One possible use for this is to allow for file formats other than JSON. For example:
 
-var i18n = new (require(&#x27;i18n-2&#x27;))({
-    locales: [&#x27;en&#x27;, &#x27;de&#x27;],
-    extension: &#x27;.yaml&#x27;,
+var i18n = new (require('i18n-2'))({
+    locales: ['en', 'de'],
+    extension: '.yaml',
     parse: function (data) {
-        return require(&#x27;js-yaml&#x27;).safeLoad(data);
+        return require('js-yaml').safeLoad(data);
     },
 ...</pre></li>
     </ul>
@@ -991,18 +984,18 @@ var i18n = new (require(&#x27;i18n-2&#x27;))({
 			return;
 		}
 
-		var accept = req.headers[&#x22;accept-language&#x22;] || &#x22;&#x22;,
+		var accept = req.headers["accept-language"] || "",
 				regExp = /(^|,\s*)([a-z0-9-]+)/gi,
 				self = this,
 				prefLocale;
 
-		while (!prefLocale &#x26;&#x26; (match = regExp.exec(accept))) {
+		while (!prefLocale &amp;&amp; (match = regExp.exec(accept))) {
 			var locale = match[2].toLowerCase();
-			var parts = locale.split(&#x22;-&#x22;);
+			var parts = locale.split("-");
 
 			if (self.locales[locale]) {
 				prefLocale = locale;
-			} else if (parts.length &#x3e; 1 &#x26;&#x26; self.locales[parts[0]]) {
+			} else if (parts.length &gt; 1 &amp;&amp; self.locales[parts[0]]) {
 				prefLocale = parts[0];
 			}
 		}
@@ -1024,7 +1017,7 @@ var i18n = new (require(&#x27;i18n-2&#x27;))({
     <li>description and source-code<pre class="apidocCodePre">readFile = function (locale) {
 		var file = this.locateFile(locale);
 
-		if (!this.devMode &#x26;&#x26; i18n.localeCache[file]) {
+		if (!this.devMode &amp;&amp; i18n.localeCache[file]) {
 			this.initLocale(locale, i18n.localeCache[file]);
 			return;
 		}
@@ -1033,21 +1026,21 @@ var i18n = new (require(&#x27;i18n-2&#x27;))({
 			var localeFile = fs.readFileSync(file);
 			var base;
 
-			// reading base file if &#x27;base&#x27; provided
-			if (typeof this.base === &#x22;function&#x22;) {
+			// reading base file if 'base' provided
+			if (typeof this.base === "function") {
 				var baseFilename;
 
 				try {
 					baseFilename = this.base(locale);
 				} catch (e) {
-					console.error(&#x27;base function threw exception for locale %s&#x27;, locale, e);
+					console.error('base function threw exception for locale %s', locale, e);
 				}
 
-				if (typeof baseFilename === &#x22;string&#x22;) {
+				if (typeof baseFilename === "string") {
 					try {
 						base = this.parse(fs.readFileSync(this.locateFile(baseFilename)));
 					} catch (e) {
-						console.error(&#x27;unable to read or parse base file %s for locale %s&#x27;, baseFilename, locale, e);
+						console.error('unable to read or parse base file %s for locale %s', baseFilename, locale, e);
 					}
 				}
 			}
@@ -1067,8 +1060,8 @@ var i18n = new (require(&#x27;i18n-2&#x27;))({
 				// putting content to locales[locale]
 				this.initLocale(locale, content);
 			} catch (e) {
-				console.error(&#x27;unable to parse locales from file (maybe &#x27; + file +
-						&#x27; is empty or invalid &#x27; + this.extension + &#x27;?): &#x27;, e);
+				console.error('unable to parse locales from file (maybe ' + file +
+						' is empty or invalid ' + this.extension + '?): ', e);
 			}
 
 		} catch (e) {
@@ -1098,7 +1091,7 @@ var i18n = new (require(&#x27;i18n-2&#x27;))({
 
 		if (!this.locales[locale]) {
 			if (this.devMode) {
-				console.warn(&#x22;Locale (&#x22; + locale + &#x22;) not found.&#x22;);
+				console.warn("Locale (" + locale + ") not found.");
 			}
 
 			locale = this.defaultLocale;
@@ -1116,8 +1109,7 @@ Returns a string containing the current locale. If no locale has been specified 
 ### `setLocale(locale)`
 
 Sets a locale to the specified string. If the locale is unknown, the locale defaults to the one specified by `defaultLocale`. For
- example if you have locales of &#x27;en&#x27; and &#x27;de&#x27;, and a `defaultLocale` of &#x27;en&#x27;, then call `.<span class
-="apidocCodeKeywordSpan">setLocale</span>(&#x27;ja&#x27;)` it will be equivalent to calling `.setLocale(&#x27;en&#x27;)`.
+ example if you have locales of 'en' and 'de', and a `defaultLocale` of 'en', then call `.<span class="apidocCodeKeywordSpan">setLocale</span>('ja')` it will be equivalent to calling `.setLocale('en')`.
 
 ### `setLocaleFromQuery([request])`
 
@@ -1149,19 +1141,19 @@ This method takes in an Express.js request object, looks at the query property, 
 
 		if (this.locales[locale]) {
 			if (this.devMode) {
-				console.log(&#x22;Overriding locale from cookie: &#x22; + locale);
+				console.log("Overriding locale from cookie: " + locale);
 			}
 
 			this.setLocale(locale);
 		}
 	}</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-    // change the cookie name from &#x27;lang&#x27; to &#x27;locale&#x27;
-    cookieName: &#x27;locale&#x27;
+    // change the cookie name from 'lang' to 'locale'
+    cookieName: 'locale'
 });
 
-// This is how you&#x27;d set a locale from req.cookies.
-// Don&#x27;t forget to set the cookie either on the client or in your Express app.
+// This is how you'd set a locale from req.cookies.
+// Don't forget to set the cookie either on the client or in your Express app.
 app.use(function(req, res, next) {
     req.i18n.<span class="apidocCodeKeywordSpan">setLocaleFromCookie</span>();
     next();
@@ -1169,7 +1161,7 @@ app.use(function(req, res, next) {
 
 // Set up the rest of the Express middleware
 app.use(app.router);
-app.use(express.static(__dirname + &#x27;/public&#x27;));
+app.use(express.static(__dirname + '/public'));
 ...</pre></li>
     </ul>
 
@@ -1186,10 +1178,10 @@ app.use(express.static(__dirname + &#x27;/public&#x27;));
 		if (!process.env.LANG) {
 			return;
 		}
-		var locale = process.env.LANG.split(&#x22;_&#x22;)[0];
+		var locale = process.env.LANG.split("_")[0];
 		if (this.locales[locale]) {
 			if (this.devMode) {
-				console.log(&#x22;Overriding locale from environment variable: &#x22; + locale);
+				console.log("Overriding locale from environment variable: " + locale);
 			}
 
 			this.setLocale(locale);
@@ -1214,11 +1206,11 @@ app.use(express.static(__dirname + &#x27;/public&#x27;));
 			return;
 		}
 
-		var locale = (req.query.lang+&#x27;&#x27;).toLowerCase();
+		var locale = (req.query.lang+'').toLowerCase();
 
 		if (this.locales[locale]) {
 			if (this.devMode) {
-				console.log(&#x22;Overriding locale from query: &#x22; + locale);
+				console.log("Overriding locale from query: " + locale);
 			}
 
 			this.setLocale(locale);
@@ -1247,7 +1239,7 @@ app.use(express.static(__dirname + &#x27;/public&#x27;));
 
 		if (this.locales[locale]) {
 			if (this.devMode) {
-				console.log(&#x22;Overriding locale from query: &#x22; + locale);
+				console.log("Overriding locale from query: " + locale);
 			}
 			this.setLocale(locale);
 		}
@@ -1272,9 +1264,9 @@ app.use(express.static(__dirname + &#x27;/public&#x27;));
 			return;
 		}
 
-		if (/^([^.]+)/.test(req.headers.host) &#x26;&#x26; this.locales[RegExp.$1]) {
+		if (/^([^.]+)/.test(req.headers.host) &amp;&amp; this.locales[RegExp.$1]) {
 			if (this.devMode) {
-				console.log(&#x22;Overriding locale from host: &#x22; + RegExp.$1);
+				console.log("Overriding locale from host: " + RegExp.$1);
 			}
 
 			this.setLocale(RegExp.$1);
@@ -1295,8 +1287,8 @@ app.use(express.static(__dirname + &#x27;/public&#x27;));
     <li>description and source-code<pre class="apidocCodePre">translate = function (locale, singular, plural) {
 		if (!locale || !this.locales[locale]) {
 			if (this.devMode) {
-				console.warn(&#x22;WARN: No locale found. Using the default (&#x22; +
-						this.defaultLocale + &#x22;) as current locale&#x22;);
+				console.warn("WARN: No locale found. Using the default (" +
+						this.defaultLocale + ") as current locale");
 			}
 
 			locale = this.defaultLocale;
@@ -1326,9 +1318,9 @@ app.use(express.static(__dirname + &#x27;/public&#x27;));
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">writeFile = function (locale) {
-		// don&#x27;t write new locale information to disk if we&#x27;re not in dev mode
+		// don't write new locale information to disk if we're not in dev mode
 		if (!this.devMode) {
-			// Initialize the locale if didn&#x27;t exist already
+			// Initialize the locale if didn't exist already
 			this.initLocale(locale, {});
 			return;
 		}
@@ -1339,35 +1331,35 @@ app.use(express.static(__dirname + &#x27;/public&#x27;));
 
 		} catch (e) {
 			if (this.devMode) {
-				console.log(&#x27;creating locales dir in: &#x27; + this.directory);
+				console.log('creating locales dir in: ' + this.directory);
 			}
 
 			fs.mkdirSync(this.directory, 0755);
 		}
 
-		// Initialize the locale if didn&#x27;t exist already
+		// Initialize the locale if didn't exist already
 		this.initLocale(locale, {});
 
 		// writing to tmp and rename on success
 		try {
 			var target = this.locateFile(locale),
-					tmp = target + &#x22;.tmp&#x22;;
+					tmp = target + ".tmp";
 
 			fs.writeFileSync(tmp,
 							 this.dump(this.locales[locale], this.indent),
-							 &#x22;utf8&#x22;);
+							 "utf8");
 
 			if (fs.statSync(tmp).isFile()) {
 				fs.renameSync(tmp, target);
 
 			} else {
-				console.error(&#x27;unable to write locales to file (either &#x27; + tmp +
-						&#x27; or &#x27; + target + &#x27; are not writeable?): &#x27;);
+				console.error('unable to write locales to file (either ' + tmp +
+						' or ' + target + ' are not writeable?): ');
 			}
 
 		} catch (e) {
-			console.error(&#x27;unexpected error writing files (either &#x27; + tmp +
-					&#x27; or &#x27; + target + &#x27; are not writeable?): &#x27;, e);
+			console.error('unexpected error writing files (either ' + tmp +
+					' or ' + target + ' are not writeable?): ', e);
 		}
 	}</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
@@ -1394,3 +1386,4 @@ app.use(express.static(__dirname + &#x27;/public&#x27;));
     ]
 </div>
 </div>
+</body></html>
